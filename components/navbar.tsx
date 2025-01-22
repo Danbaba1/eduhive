@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Button } from "./ui/button";
 import NavbarActions from "./navbar-actions";
 import Logo from "../public/Images/logo.png"
+import Link from "next/link";
 
 const Navbar = () => {
     return (
@@ -20,11 +21,14 @@ const Navbar = () => {
                     <NavbarActions />
                 </div>
                 <div>
-                    <Button variant="default" className="bg-[#0F52BA] rounded-[10px] px-8 hover:text-[#0F52BA] hover:bg-white ">
-                        <span className="font-semibold text-xl ">
-                            Sign up
-                        </span>
-                    </Button>
+                    <Link href="/sign-up">
+
+                        <Button variant="default" className="bg-[#0F52BA] rounded-[10px] px-8 hover:text-[#0F52BA] hover:bg-white ">
+                            <span className="font-semibold text-xl ">
+                                Sign up
+                            </span>
+                        </Button>
+                    </Link>
                 </div>
             </div>
         </div>
